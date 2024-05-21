@@ -8,34 +8,47 @@
 </head>
 <body>
     <header class="header">
-        <div class="logo">BookLibrary</div>
+        <div class="logo"><p>Book<span class="light-text">Library</p></span></div>
     </header>
     <main class="main">
-        <button class="add-book-btn">ADD BOOK</button>
+        <button class="new-book-btn">ADD BOOK</button>
         <dialog class="form-dialog">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
-            <form action="">
-                <p><label type="text" for="input1">Title:</label><input type="text" id="input1"></p>
-                <p><label type="text" for="input2">Author:</label><input type="text" id="input2"></p>
-                <p><label type="number" for="input3">Pages</label><input type="text" id="input3"></p>
-                <ul>
-                    <li><input type="radio" name="read" value="read">read</li>
-                    <li><input type="radio" name="read" value="not read">Not read</li>
-                </ul>
-            </form>
+            <div>
+                <svg class="close-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+                <form action="">
+                    <p><label for="input1">Title<span>*</span></label><input type="text" id="input1" placeholder="title" required></p>
+                    <p><label for="input2">Author<span>*</span></label><input type="text" id="input2" placeholder="author" required></p>
+                    <p><label for="input3">Pages<span>*</span></label><input type="number" id="input3" placeholder="pages" required></p>
+                    <ul>
+                        <li><input type="radio" name="read" value="read" id="read" required><label for="read">read</label></li>
+                        <li><input type="radio" name="read" value="not read" id="not-read" required><label for="not-read">Not read</label></li>
+                    </ul>
+                    <button class="add-btn">ADD</button>
+                </form>
+            </div>
         </dialog>
         <table>
+            <caption>Note: you can change Read/Not read by clicking on it.</caption>
             <thead>
                 <tr>
-                    <th>Title</th>
-                    <th>Author</th>
-                    <th>pages</th>
-                    <th>read</th>
-                    <td></td>
+                    <th span="col">Title</th>
+                    <th span="col">Author</th>
+                    <th span="col">pages</th>
+                    <th span="col">read</th>
+                    <th span="col"></th>
                 </tr>
             </thead>
-            <tbody></tbody>
+            <tbody class="t-body">
+                <tr>
+                    <td>book title</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="delete">DELETE</td>
+                </tr>
+            </tbody>
         </table>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>

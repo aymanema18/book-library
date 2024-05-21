@@ -5,4 +5,137 @@
 
 body {
     font-family: "inter", Robot, sans-serif;
+    margin: 0;
+    display: grid;
+    grid-template-rows: min-content 1fr;
+
 }
+
+.logo {
+    font-size: 40px;
+    font-weight: bold;
+    padding-bottom: 25px;
+    justify-self: center;
+    display: grid;
+    justify-content: center;
+}
+
+.light-text {
+    font-weight: 300;
+}
+
+.main {
+    display: grid;
+    grid-template-rows: 150px 1fr;
+    justify-items: center;
+    align-items: center;
+
+}
+
+button {
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    background-color: #0D99FF;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5em 1.5em;
+    box-shadow: 0 2px 3px rgb(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+table {
+    width: 700px;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+th:not(:nth-child(5)), td:not(:nth-child(5)) {
+    width: 22.5%;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: start;
+}
+
+th:nth-child(5), td:nth-child(5) {
+    width: 10;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.delete {
+    font-weight: bold;
+    cursor: pointer;
+    color: rgb(252, 62, 62);
+}
+
+caption {
+    color: #808080;
+    font-size: 12px;
+    padding: 10px 0;
+}
+
+tbody tr {
+    border-top: 1px solid #808080;
+}
+
+.close-btn {
+    height: 20px;
+    width: auto;
+    justify-self: end;
+    cursor: pointer;
+}
+
+form {
+    display: grid;
+    grid-template-rows: repeat(5, min-content) ;
+}
+
+.add-btn {
+    align-self: center;
+    justify-self: center;
+}
+
+label {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+form p {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 10px 0;
+    font-size: 15px;
+}
+
+p > input {
+    border: none;
+    border-radius: 2px;
+    background-color: #e0e0e0;
+    color: #acacac;
+    padding: 0.4em;
+    font-size: 16px;
+}
+
+.form-dialog {
+    height: 350px;
+    width: 250px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 3px rgb(0, 0, 0, 0.3);
+}
+
+ .form-dialog > div {
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    height: 100%; 
+ }
+
+ ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: start;
+    gap: 10px;
+    padding: 0;
+ }
