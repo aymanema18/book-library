@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Library</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">BookLibrary</div>
+    </header>
+    <main class="main">
+        <button class="add-book-btn">ADD BOOK</button>
+        <dialog class="form-dialog">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+            <form action="">
+                <p><label type="text" for="input1">Title:</label><input type="text" id="input1"></p>
+                <p><label type="text" for="input2">Author:</label><input type="text" id="input2"></p>
+                <p><label type="number" for="input3">Pages</label><input type="text" id="input3"></p>
+                <ul>
+                    <li><input type="radio" name="read" value="read">read</li>
+                    <li><input type="radio" name="read" value="not read">Not read</li>
+                </ul>
+            </form>
+        </dialog>
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>pages</th>
+                    <th>read</th>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </main>
+</body>
+</html>

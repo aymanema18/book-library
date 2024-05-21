@@ -1,0 +1,8 @@
+@font-face {
+    font-family: "inter";
+    src: url(fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+body {
+    font-family: "inter", Robot, sans-serif;
+}
