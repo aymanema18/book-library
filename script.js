@@ -23,6 +23,14 @@ function Book(title, author, pages, read) {
     this.read = read;
 }
 
+Book.prototype.changeStatus = function() {
+    if (this.read === "read") {
+        this.read = "not read";
+    } else {
+        this.read = "read";
+    }
+}
+
 
 openBtn.addEventListener("click", () => {
     dialog.showModal();
@@ -73,6 +81,7 @@ tBody.addEventListener("click", (event) => {
 
 tBody.addEventListener("click", (event) => {
     if (event.target.classList.contains("read-btn")) {
+        library[event.target.dataset.index].changeStatus();
         if (event.target.innerHTML === "read") {
             event.target.innerHTML = "not read";
         } else {
@@ -80,18 +89,3 @@ tBody.addEventListener("click", (event) => {
         }
     }
 })
-
-
-deleteBtn.forEach((elem) => {
-    elem.addEventListener("click", () => {
-        delete library[elem.dataset.index];
-        document.querySelector(`tr[data-index="${deleteBtn.dataset.index}"]`).remove();
-    })
-})
-
-for (let i = 0; i > deleteBtn.length; i++) {
-    deleteBtn[i].addEventListener("click", () => {
-        delete library[deleteBtn.dataset.index];
-        document.querySelector(`tr[data-index="${deleteBtn.dataset.index}"]`).remove();
-    })
-}

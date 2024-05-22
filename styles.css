@@ -84,7 +84,7 @@ tbody tr {
 }
 
 tr:first-of-type {
-    border-bottom: 1px solid #808080;
+    border-bottom: 2px solid #808080;
 }
 
 .close-btn {
