@@ -57,13 +57,17 @@ th:not(:nth-child(5)), td:not(:nth-child(5)) {
     text-align: start;
 }
 
+td {
+    color: #808080;
+}
+
 th:nth-child(5), td:nth-child(5) {
     width: 10;
     font-size: 20px;
     line-height: 30px;
 }
 
-.delete {
+.delete-btn {
     font-weight: bold;
     cursor: pointer;
     color: rgb(252, 62, 62);
@@ -77,6 +81,10 @@ caption {
 
 tbody tr {
     border-top: 1px solid #808080;
+}
+
+tr:first-of-type {
+    border-bottom: 1px solid #808080;
 }
 
 .close-btn {
@@ -138,4 +146,8 @@ p > input {
     justify-content: start;
     gap: 10px;
     padding: 0;
+ }
+
+ .read-btn {
+    cursor: pointer;
  }

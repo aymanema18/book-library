@@ -11,6 +11,7 @@ let closeBtn = document.querySelector(".close-btn");
 let dialog = document.querySelector(".form-dialog");
 let tBody = document.querySelector(".t-body");
 let addBtn = document.querySelector(".add-btn");
+let deleteBtn = document.querySelectorAll(".delete-btn");
 
 let i = 0;
 
@@ -51,11 +52,46 @@ addBtn.addEventListener("click", (event) => {
         <td data-index="${i}">${authorInput.value}</td>
         <td data-index="${i}">${pagesInput.value}</td>
         <td data-index="${i}" class="read-btn">${checkedBtn.value}</td>
-        <td data-index="${i}" class="delete">DELETE</td>
+        <td data-index="${i}"><div data-index="${i}" class="delete-btn">DELETE</div></td>
     </tr>`;
         i++;
-        titleInput.textContent = "";
-        authorInput.textContent = "";
-        pagesInput.textContent = "";
+        titleInput.value = "";
+        authorInput.value = "";
+        pagesInput.value = "";
+        checkedBtn.checked = false;
+    }
+    deleteBtn = document.querySelectorAll(".delete-btn");
+})
+
+tBody.addEventListener("click", (event) => {
+    if (event.target.classList.contains("delete-btn")) {
+      let deleteIndex = event.target.dataset.index;
+      delete library[deleteIndex];
+      document.querySelector(`tr[data-index="${deleteIndex}"]`).remove();
+    }
+  })
+
+tBody.addEventListener("click", (event) => {
+    if (event.target.classList.contains("read-btn")) {
+        if (event.target.innerHTML === "read") {
+            event.target.innerHTML = "not read";
+        } else {
+            event.target.innerHTML = "read";
+        }
     }
 })
+
+
+deleteBtn.forEach((elem) => {
+    elem.addEventListener("click", () => {
+        delete library[elem.dataset.index];
+        document.querySelector(`tr[data-index="${deleteBtn.dataset.index}"]`).remove();
+    })
+})
+
+for (let i = 0; i > deleteBtn.length; i++) {
+    deleteBtn[i].addEventListener("click", () => {
+        delete library[deleteBtn.dataset.index];
+        document.querySelector(`tr[data-index="${deleteBtn.dataset.index}"]`).remove();
+    })
+}
