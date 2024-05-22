@@ -58,7 +58,8 @@ th:not(:nth-child(5)), td:not(:nth-child(5)) {
 }
 
 td {
-    color: #808080;
+    color: #535353;
+    font-weight: 400;
 }
 
 th:nth-child(5), td:nth-child(5) {
@@ -74,17 +75,17 @@ th:nth-child(5), td:nth-child(5) {
 }
 
 caption {
-    color: #808080;
+    color: #535353;
     font-size: 12px;
     padding: 10px 0;
 }
 
 tbody tr {
-    border-top: 1px solid #808080;
+    border-top: 1px solid #535353;
 }
 
 tr:first-of-type {
-    border-bottom: 2px solid #808080;
+    border-bottom: 1x solid #535353;
 }
 
 .close-btn {
@@ -120,7 +121,7 @@ form p {
 p > input {
     border: none;
     border-radius: 2px;
-    background-color: #e0e0e0;
+    background-color: #f1f1f1;
     color: black;
     padding: 0.4em;
     font-size: 16px;
