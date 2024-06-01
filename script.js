@@ -16,18 +16,20 @@ let deleteBtn = document.querySelectorAll(".delete-btn");
 let i = 0;
 
 
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-}
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
 
-Book.prototype.changeStatus = function() {
-    if (this.read === "read") {
-        this.read = "not read";
-    } else {
-        this.read = "read";
+    changeStatus() {
+        if (this.read === "read") {
+            this.read = "not read";
+        } else {
+            this.read = "read";
+        }
     }
 }
 
